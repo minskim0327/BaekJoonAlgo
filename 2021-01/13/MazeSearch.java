@@ -3,6 +3,8 @@ import java.util.*;
 
 /**
  * Problem 2178
+ * Time Complexity: O(mn)
+ * Space Complexity: O(mn)
  */
 public class MazeSearch {
   private static int n, m;
@@ -67,13 +69,13 @@ public class MazeSearch {
   private static boolean isValidCoord(int x, int y) {
     return x >= 0 && x < m && y >= 0 && y < n && grid[y][x] == 1 && !visited[y][x];
   }
-}
-
-class Coord {
-  public int x, y;
-
-  public Coord(int x, int y) {
-    this.x = x;
-    this.y = y;
+  private class Coord {
+    public int x, y;
+  
+    public Coord(int x, int y) {
+      this.x = x;
+      this.y = y;
+    }
   }
 }
+
